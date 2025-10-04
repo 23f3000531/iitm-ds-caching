@@ -28,8 +28,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: prime-cache-6f65bef
-        run: echo "Cache hit/miss result: ${{ steps.cache-deps.outputs.cache-hit }}"
+        run: echo "Cache hit/miss result:${{ steps.cache-deps.outputs.cache-hit }}"
 
       - name: Verify installation (demo step)
-        run: python -c 'import numpy; print("Dependencies loaded successfully!")'
-
+        run: |
+          python -c "import numpy; print('Dependencies loaded successfully!')"
